@@ -23,3 +23,42 @@
 [data-theme="dark"] #page-header::before {
     background: transparent !important;
 }
+
+
+/*在这里可以自定义网页字体*/
+/*在主题配置文件_config.butterfly.yml中的font配置项以及blog_title_font配置项写上你刚刚引入的字体名称，系统会根据先后次序从前到后依次加载这些字体：*/
+/*@font-face {*/
+/*    !* 为载入的字体取名字(随意) *!*/
+/*    font-family: 'YSHST';*/
+/*    !* 字体文件地址(相对或者绝对路径都可以) *!*/
+/*    src: url(/font/优设好身体.woff2);*/
+/*    !* 定义加粗样式(加粗多少) *!*/
+/*    font-weight: normal;*/
+/*    !* 定义字体样式(斜体/非斜体) *!*/
+/*    font-style: normal;*/
+/*    !* 定义显示样式 *!*/
+/*    font-display: block;*/
+/*}*/
+/*font-family属性值中使用webfont来声明使用的是服务器端字体，即设置文本的字体名称。*/
+/*src属性值中首先指定了字体文件所在的路径。*/
+/*format声明字体文件的格式，可以省略文件格式的声明，单独使用src属性值。*/
+/*font-style：设置文本样式。取值：normal:不使用斜体；italic:使用斜体；oblique:使用倾斜体；inherit：从父元素继承。*/
+/*支持格式：*.eot(老版本IE)，*.otf，*.ttf，*.woff，*.woff2(推荐)*/
+
+
+
+/* 一级菜单居中 */
+/*#nav .menus_items {*/
+/*    position: absolute !important;*/
+/*    width: fit-content !important;*/
+/*    left: 50% !important;*/
+/*    transform: translateX(-50%) !important;*/
+/*}*/
+/* 子菜单横向展示 */
+/*#nav .menus_items .menus_item:hover .menus_item_child {*/
+/*    display: flex !important;*/
+/*}*/
+/* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 */
+/*.menus_items .menus_item:nth-child(2) .menus_item_child {*/
+/*    left: -125px;*/
+/*}*/
