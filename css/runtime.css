@@ -1,0 +1,49 @@
+/*电子钟字体*/
+@font-face {
+    font-family: 'UnidreamLED';
+    src: url("https://cdn.jsdelivr.net/npm/akilar-candyassets/fonts/UnidreamLED.ttf");
+    font-display: swap;
+}
+div#runtime {
+    width: fit-content;
+    margin: auto;
+    color: #ffffff;
+    padding-inline: 5px;
+    border-radius: 10px;
+    font-family: 'HarmonyOS_Medium', sans-serif;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+[data-theme="dark"] div#runtime {
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    animation: glow 1s ease-in-out infinite alternate;
+}
+/*悬停显示徽标提示语*/
+a.github-badge:hover:before {
+    position: fixed;
+    width: fit-content;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 10%;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 100;
+    content: attr(data-title);
+    font-size: 20px;
+    color: #fff;
+    padding: 10px;
+    background-color: var(--text-bg-hover);
+}
+[data-theme=dark] a.github-badge:hover:before {
+    background-color: rgba(18,18,18,0.8);
+}
+@keyframes glow {
+    from {
+        text-shadow: 0 0 2px #ffffff, 0 0 4px #ffffff;
+    }
+    to {
+        text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff;
+    }
+}
