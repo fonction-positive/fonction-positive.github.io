@@ -1,0 +1,56 @@
+.data /* mot clé de déclaration d'une zone de données */
+mot1: .asciz "salut" @ Déclaration de la première chaîne
+mot2: .asciz "bonjour" @ Déclaration de la deuxième chaîne
+SAME: .byte 0 @ Variable pour stocker le résultat de comparaison
+
+.text
+.global main
+.type main, %function
+
+main:
+	LDR R0, =mot1 @ Charger l'adresse de mot1
+	LDR R1, =mot2 @ Charger l'adresse de mot2
+	MOV R2, #0 @ Initialiser l'index
+	MOV R4, #0
+	MOV R5, #0
+	LDR R6, =SAME @ Charger l'adresse de SAME
+
+loop:
+	LDRB R4, [R0, R2] @ Charger un caractère de mot1
+	LDRB R5, [R1, R2] @ Charger un caractère de mot2
+	CMP R4, #0 @ Vérifier fin de mot1
+	BEQ check_mot2
+	CMP R5, #0 @ Vérifier fin de mot2
+	BEQ fin2
+	CMP R4, R5 @ Comparer les caractères
+	BNE fin2
+	ADD R2, R2, #1 @ Incrémenter l'index
+	B loop
+
+check_mot2:
+	CMP R5, #0 @ Vérifier fin de mot2
+	BNE fin2
+
+fin:
+	MOV R7, #1 @ Chaînes identiques
+	STRB R7, [R6]
+	B end_program
+
+fin2:
+	MOV R7, #0 @ Chaînes différentes
+	STRB R7, [R6]
+	B end_program
+
+end_program:
+	BX LR
+	.end
+
+
+
+
+
+
+
+
+
+
