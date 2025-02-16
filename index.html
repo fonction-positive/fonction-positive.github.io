@@ -169,7 +169,7 @@
           </div>
           <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Devoir/"><span class="card-category-list-name">Devoir</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/HelloWorld/"><span class="card-category-list-name">HelloWorld</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/test/"><span class="card-category-list-name">test</span><span class="card-category-list-count">1</span></a></li>
-          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Étiquettes</span></div><div class="card-tag-cloud"><a href="/tags/Micro/" style="font-size: 1.5em; color: #99a9bf">Micro</a> <a href="/tags/CY/" style="font-size: 1.5em; color: #99a9bf">CY</a> <a href="/tags/test/" style="font-size: 1.1em; color: #999">test</a> <a href="/tags/HelloWorld/" style="font-size: 1.1em; color: #999">HelloWorld</a></div></div><div class="card-widget card-archives">
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Étiquettes</span></div><div class="card-tag-cloud"><a href="/tags/Micro/" style="font-size: 1.5em; color: #99a9bf">Micro</a> <a href="/tags/test/" style="font-size: 1.1em; color: #999">test</a> <a href="/tags/CY/" style="font-size: 1.5em; color: #99a9bf">CY</a> <a href="/tags/HelloWorld/" style="font-size: 1.1em; color: #999">HelloWorld</a></div></div><div class="card-widget card-archives">
     <div class="item-headline">
       <i class="fas fa-archive"></i>
       <span>Archives</span>
@@ -346,6 +346,14 @@ typedJSFn.run(subtitleType)</script></div><canvas class="fireworks" mobile="fals
     butterfly_swiper_injector_config();
   }
   </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '0.5s');
+    arr[i].setAttribute('data-wow-offset', '100');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('blog-slider');
 for(var i = 0;i<arr.length;i++){
     arr[i].classList.add('wow');
     arr[i].classList.add('animate__zoomIn');
