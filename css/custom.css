@@ -1,0 +1,74 @@
+/* 导航栏样式 */
+ul.categoryBar-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    margin: 0 auto !important;
+    padding: 10px !important;
+    max-width: 900px !important;
+}
+
+/* 分类项样式 */
+li.categoryBar-list-item {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 8px 20px !important;
+    margin: 0 !important;
+    background: var(--card-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    
+    /* 移除原有背景和阴影 */
+    background-image: none !important;
+    box-shadow: none !important;
+}
+
+/* 悬停效果 */
+li.categoryBar-list-item:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    border-color: var(--main) !important;
+}
+
+/* 分类名称样式 */
+a.categoryBar-list-link {
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    color: var(--font-color) !important;
+    margin: 0 !important;
+}
+
+/* 文章数量样式 */
+span.categoryBar-list-count {
+    font-size: 0.8rem !important;
+    margin-left: 5px !important;
+    color: var(--font-color) !important;
+    opacity: 0.8 !important;
+}
+
+/* 隐藏描述文本 */
+span.categoryBar-list-descr {
+    display: none !important;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+    ul.categoryBar-list {
+        padding: 5px !important;
+    }
+    
+    li.categoryBar-list-item {
+        padding: 5px 15px !important;
+    }
+    
+    a.categoryBar-list-link {
+        font-size: 0.85rem !important;
+    }
+    
+    span.categoryBar-list-count {
+        font-size: 0.75rem !important;
+    }
+} 

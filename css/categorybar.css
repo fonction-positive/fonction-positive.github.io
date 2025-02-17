@@ -1,0 +1,80 @@
+#categoryBar {
+    width: 100% !important;
+}
+
+ul.categoryBar-list {
+    margin: 5px 5px 0 5px !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+}
+
+li.categoryBar-list-item {
+    font-weight: bold;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100px !important;
+    height: 100px !important;
+    margin: 0 !important;
+    background-image: linear-gradient(rgba(0,0,0,0.4) 25%, rgba(16,16,16,0) 100%);
+    border-radius: 15px;
+    padding: 10px !important;
+    box-shadow: rgba(50,50,50,0.3) 0 0 10px;
+    overflow: hidden;
+    background-size: cover !important;
+    background-position: center !important;
+    transition: all 0.3s ease;
+}
+
+li.categoryBar-list-item:hover {
+    transform: translateY(-3px);
+    box-shadow: rgba(50,50,50,0.4) 0 5px 15px;
+}
+
+a.categoryBar-list-link {
+    color: #fff !important;
+    font-size: 16px !important;
+    text-align: center !important;
+    margin-bottom: 5px !important;
+}
+
+a.categoryBar-list-link::before {
+    display: none !important;
+}
+
+span.categoryBar-list-count {
+    display: block !important;
+    color: #fff !important;
+    font-size: 14px !important;
+}
+
+span.categoryBar-list-count::before {
+    content: '\f02d' !important;
+    padding-right: 5px !important;
+    display: inline-block;
+    font-weight: 600;
+    font-family: 'Font Awesome 6 Free';
+}
+
+/* 隐藏描述文本 */
+span.categoryBar-list-descr {
+    display: none !important;
+}
+
+@media screen and (max-width: 650px) {
+    li.categoryBar-list-item {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    
+    a.categoryBar-list-link {
+        font-size: 14px !important;
+    }
+    
+    span.categoryBar-list-count {
+        font-size: 12px !important;
+    }
+}
